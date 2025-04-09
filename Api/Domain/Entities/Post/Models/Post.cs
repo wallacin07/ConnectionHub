@@ -8,5 +8,6 @@ public class Post : IEntity
     public string? Img { get; set; }
     public required DateTime DataPostagem { get; set; }
     public required User Creator { get; set; }
+    public ICollection<Comment> Comments { get; set; } = [];
 }
 

@@ -1,3 +1,4 @@
+using Api.Core.Mapping;
 using Api.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,6 @@ public partial class ConnectionHubContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        
+        modelBuilder.ApplyConfiguration(new UserClassMap());
     }
 }

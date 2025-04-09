@@ -70,8 +70,8 @@ public class JwtService : IJwtService
 
         _userContext.Fill(new ContextData
         {
-            UserId = int.Parse(claims.FindFirst("UserId")!.Value),
-            Username = claims.FindFirst("Username")!.Value,
+            UserId = int.Parse(claims.FindFirst("User_Id")!.Value),
+            Username = claims.FindFirst("Name")!.Value,
         });
     }
 }

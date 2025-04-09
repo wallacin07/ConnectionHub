@@ -7,5 +7,5 @@ public interface IUserService
 {
     public Task<AppResponse<UserDTO>> CreateUser(UserCreatePayload payload);
     public Task DeleteUser(int Id);
-    public Task UpdateUser(int Id, UserUpdatePayload payload);
+    public Task<AppResponse<UserDTO>> UpdateUser(int Id, UserUpdatePayload payload);
 }

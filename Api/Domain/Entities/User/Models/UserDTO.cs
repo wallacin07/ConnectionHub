@@ -3,9 +3,9 @@ using Api.Domain.Models;
 
 
 public record UserDTO(
-    string PerfilPhoto,
     string Username,
-    string Password
+    string Password,
+    string? PerfilPhoto
 ){
     public static UserDTO Map(User obj)
     {
