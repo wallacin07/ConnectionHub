@@ -9,6 +9,7 @@ public static partial class ServiceCollectionExtension
     public static IServiceCollection ConfigureEntitiesServices (this IServiceCollection services) 
     {
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IPostService, PostService>();
         return services;
     }
 }
