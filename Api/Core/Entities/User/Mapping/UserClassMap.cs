@@ -16,11 +16,6 @@ public class UserClassMap : IEntityTypeConfiguration<User>
         builder.Property(_user => _user.Email).HasColumnName("email");
         builder.Property(_user => _user.Password).HasColumnName("password");
         builder.Property(_user => _user.PerfilPhoto).HasColumnName("perfil_photo");
-
-        builder.HasMany(_user => _user.Posts)
-        .WithOne(_post => _post.Creator)
-        .HasForeignKey("post_id")
-        .OnDelete(DeleteBehavior.Cascade);
     }
 
 

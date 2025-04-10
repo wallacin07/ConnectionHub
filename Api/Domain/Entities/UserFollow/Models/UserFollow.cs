@@ -1,6 +1,6 @@
-using Api.Domain.Models;
+using Genesis.Domain.Models;
 namespace Api.Domain.Models;
-public class UserFollow
+public class UserFollow : IEntity
 {
     public int FollowerId { get; set; }
     public required User Follower { get; set; }

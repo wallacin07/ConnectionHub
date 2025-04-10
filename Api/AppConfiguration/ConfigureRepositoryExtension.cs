@@ -11,6 +11,15 @@ public static partial class ServiceCollectionExtension
     {
         services.AddScoped<BaseRepository<User>, UserRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
+
+        services.AddScoped<BaseRepository<UserFollow>, UserFollowRepository>();
+        services.AddScoped<IUserFollowRepository, UserFollowRepository>();
+
+        services.AddScoped<BaseRepository<Post>, PostRepository>();
+        services.AddScoped<IPostRepository, PostRepository>();
+
+        services.AddScoped<BaseRepository<Comment>, CommentRepository>();
+        services.AddScoped<ICommentRepository, CommentRepository>();
         return services;
     }
 }
