@@ -1,6 +1,4 @@
-using Api.Domain.Models;
-
-
+namespace Api.Domain.Models;
 
 public record UserDTO(
     string Username,
